@@ -18,23 +18,23 @@ class tree {
     Node* root;
 
 
-    void inorder_r(Node* root);
-    void preorder_r(Node* root);
-    void postorder_r(Node* root);
+    virtual void inorder_r(Node* root);
+    virtual void preorder_r(Node* root);
+    virtual void postorder_r(Node* root);
 
     Node* delete_r(Node* root, T _x);
 
     Node* search_r(Node* root, T _x);
 
-    std::vector<std::string> build_tree_diagram(Node* root, int& width);
+    virtual std::vector<std::string> build_tree_diagram(Node* root, int& width);
    public:
     tree() : root(nullptr) {};
     
     Node* search(T _x);
-    void inorder();
-    void preorder();
-    void postorder();
-    void print(int width);
+    virtual void inorder();
+    virtual void preorder();
+    virtual void postorder();
+    virtual void print(int width);
 };
 
 }  // namespace cppds
